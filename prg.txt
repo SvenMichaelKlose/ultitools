@@ -1,0 +1,15 @@
+#!
+# This file defines a sample menu structure for testing the Vic Flash Plugin.
+# See filelist.txt for a more comprehensive menu structure.
+(
+"RETURN to BASIC"	readme.prg
+*root.test
+"Test Programs"/test
+)
+(
+*test
+"_"/root.test
+#"32K RAM Test"		ramtest.prg
+#"Flash Bank Test"	banktest.prg
+#"Flash Programmer"	flash4.prg
+)
