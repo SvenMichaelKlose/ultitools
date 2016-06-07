@@ -32,8 +32,8 @@ cFgD		= 7	; foreground colour for subdirectory entry
 
 mout	= $d1			; pointer for writing menu characters
 cout	= $c3			; pointer for colourising menu entries
-mbits	= $f7			; bit store for menu characters
-tmp	= mbits			; temporary location used by getbyt1
+mbits   = $0a           ; bit store for menu characters
+tmp     = $f7           ; temporary location used by getbyt1
 typefl	= $f9			; directory entry type
 tmpos	= typefl		; temporary position, 24 bits
 menupos	= $fc			; menu position, 24 bits
@@ -1078,8 +1078,8 @@ launchcart_end
 
 	;; table=>bitmasks for the configuration register,
 	;; and bit patterns for selecting ROM
-	;; 0=BLK1,1=BLK2,2=BLK2,3=BLK3
-blkmask	.byte $03,$01,$0c,$04,$30,$10,$c0,$40
+    ;; 0=BLK1,1=BLK2,2=BLK3,3=BLK5
+blkmask .byte $fc,$01,$f3,$04,$cf,$10,$3f,$40
 
 	;; clear the low RAM, copy the RESET code
 	;; restore normal key repeat and set the cassette buffer pointer
